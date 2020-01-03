@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>   <!--ejs partials(layouts)-->
+
+<h1>Home</h1>
+<p><%= texthome %></p>
+<% homeposts.forEach(function(homepost){%>
+  <h1><%= homepost.title %></h1>
+   <p><%= homepost.content.substring(0,100) + "..." %>
+    <a href="/posts/ + <%= homepost.title %> " >Read More</a>
+   </p> 
+   
+<%})%>
+
+<%- include('partials/footer'); -%>
